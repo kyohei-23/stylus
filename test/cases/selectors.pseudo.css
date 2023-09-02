@@ -123,3 +123,10 @@ input:not(:last-child) {
     display: none;
   }
 }
+div {
+  color: currentColor;
+}
+div:is(.foo, 
+.bar) {
+  color: #f00;
+}

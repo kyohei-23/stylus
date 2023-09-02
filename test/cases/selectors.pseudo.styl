@@ -84,12 +84,14 @@ label
   span
     color #014
 
-:is(header, main, footer) p:hover
-  color: red;
-  cursor: pointer;
-:where(header, main, footer) p:hover
-  color: red
-  cursor: pointer
+:is(header, main, footer) 
+  p:hover
+    color: red;
+    cursor: pointer;
+:where(header, main, footer) 
+  p:hover
+    color: red
+    cursor: pointer
 a:where(:not(:hover))
   text-decoration: none
 a:has(> img)
@@ -103,3 +105,8 @@ input
 @media (min-width: 0px)
   div :not(.icon)
     display: none
+
+div
+  color currentColor
+  &:is(.foo, .bar)
+    color #f00
